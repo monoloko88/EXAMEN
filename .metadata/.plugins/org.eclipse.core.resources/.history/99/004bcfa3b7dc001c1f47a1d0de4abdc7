@@ -1,0 +1,10 @@
+package herencia;
+
+public class Alumno extends Persona{
+
+	private int nota;
+
+	public void informacion() {
+		System.out.println();
+	}
+}

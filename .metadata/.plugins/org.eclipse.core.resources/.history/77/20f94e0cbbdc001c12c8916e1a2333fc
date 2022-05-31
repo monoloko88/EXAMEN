@@ -1,0 +1,11 @@
+package paqueteDos;
+
+import paqueteUno.Aleatorio;
+
+public class NumeroEjemplo extends Aleatorio {
+
+	public void mostrar() {
+		Aleatorio ale = new Aleatorio();
+	}
+	
+}

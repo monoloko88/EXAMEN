@@ -1,0 +1,19 @@
+package herencia;
+
+public class Alumno extends Persona{
+	
+	public Alumno(int nota) {
+		this.nota = nota;
+	}
+	
+	public Alumno(String nombre, int edad, int nota) {
+		super(nombre, edad);
+		this.nota = nota;
+	}
+
+	private int nota;
+
+	public void informacion() {
+		System.out.println("El alumno creado es: " + nombre +" "+ edad +" "+ nota);
+	}
+}

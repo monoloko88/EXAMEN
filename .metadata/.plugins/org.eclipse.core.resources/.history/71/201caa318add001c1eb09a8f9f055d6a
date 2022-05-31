@@ -1,0 +1,26 @@
+package paquetePrincipal;
+
+public class Libro extends Articulo {
+	
+	private String autor;
+
+	public Libro(String nombre, int precio, String autor) {
+		super(nombre, precio);
+		this.autor = autor;
+	}
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+
+	@Override
+	public String toString() {
+		String info = super.toString() +"\n Autor: " + getAutor();
+		return info;
+	}
+
+}

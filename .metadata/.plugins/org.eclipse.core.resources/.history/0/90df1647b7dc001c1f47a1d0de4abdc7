@@ -1,0 +1,9 @@
+package herencia;
+
+public class Alumno {
+	private int nota;
+
+	public void informacion() {
+		System.out.println();
+	}
+}

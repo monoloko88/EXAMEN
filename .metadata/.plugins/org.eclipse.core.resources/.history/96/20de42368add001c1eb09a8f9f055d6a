@@ -1,0 +1,19 @@
+package paquetePrincipal;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		principal();
+	}
+
+	private static void principal() {
+		Libro libro = new Libro("El Principito", 27, "AutorDeLibro");
+		
+		String frase = libro.toString();
+		System.out.println(frase);
+		
+//		Disco disco = new Disco("Destrangis", 35, "Estopa");
+//		disco.toString();
+	}
+
+}

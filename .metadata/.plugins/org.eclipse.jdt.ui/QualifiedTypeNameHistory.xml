@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="coleccion.ArraysMultidimensionales"/>
+    <fullyQualifiedTypeName name="paquetePrincipal.Paises"/>
+    <fullyQualifiedTypeName name="miPaquete.AlumnoUno"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="paquetePrincipal.MiArray"/>
+    <fullyQualifiedTypeName name="paquetePrincipal.DesarrolloArray"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="paquetePrincipal.Menu"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="paquetePrincipal.FichaAlumno"/>
+    <fullyQualifiedTypeName name="paquetePrincipal.LlamadaMenu"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="alumno.Alumno"/>
+    <fullyQualifiedTypeName name="alumno.Menu"/>
+    <fullyQualifiedTypeName name="herencia.Alumno"/>
+    <fullyQualifiedTypeName name="paqueteUno.Aleatorio"/>
+    <fullyQualifiedTypeName name="paqueteUno.Principal"/>
+    <fullyQualifiedTypeName name="paqueteDos.NumeroEjemplo"/>
+    <fullyQualifiedTypeName name="paquetePrincipal.Libro"/>
+    <fullyQualifiedTypeName name="paquetePrincipal.Disco"/>
+</qualifiedTypeNameHistroy>
