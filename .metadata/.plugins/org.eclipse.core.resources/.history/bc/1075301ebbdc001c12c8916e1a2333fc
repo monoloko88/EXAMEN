@@ -1,8 +1,0 @@
-package paqueteUno;
-
-public class Aleatorio {
-
-	private void numeroAleatorio() {
-		System.out.println("NUMERO ALEATORIO");
-	}
-}
