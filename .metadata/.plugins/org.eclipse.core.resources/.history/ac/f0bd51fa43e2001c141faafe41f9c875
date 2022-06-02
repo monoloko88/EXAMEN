@@ -1,0 +1,52 @@
+package miPaquete;
+
+public class DatosPrimitivos {
+    private int entero;
+    private double doble;
+    private float flotante;
+    private char caracter;
+    private boolean booleano;
+    private String cadena;
+
+    public DatosPrimitivos() {
+        entero = 0;
+        doble = 0.0;
+        flotante = 0.0f;
+        caracter = 'c';
+        booleano = false;
+        cadena = "cadena";
+    }
+
+    public DatosPrimitivos(int entero, double doble, float flotante, char caracter, boolean booleano, String cadena) {
+        this.entero = entero;
+        this.doble = doble;
+        this.flotante = flotante;
+        this.caracter = caracter;
+        this.booleano = booleano;
+        this.cadena = cadena;
+    }
+
+    public int getEntero() {
+        return entero;
+    }
+
+    public void setEntero(int entero) {
+        this.entero = entero;
+    }
+
+    public int maxEntero() {
+        return Integer.MAX_VALUE;
+    }
+
+    public int minEntero() {
+        return Integer.MIN_VALUE;
+    }
+
+    public boolean cadenaIgualA(String cadena) {
+        return this.cadena.equals(cadena);
+    }
+
+    public char getCharAt(int posicion) {
+        return cadena.charAt(posicion);
+    }
+}

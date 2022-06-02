@@ -1,0 +1,22 @@
+package miPaquete;
+
+public class Random {
+    
+    private int entero;
+
+    public Random() {
+        entero = 0;
+    }
+
+    public int enteroAleatorioMath(int primero, int ultimo) {
+        entero = (int) (Math.random() * (ultimo - primero + 1)) + primero;
+        return entero;
+    }
+
+    public int enteroAleatorioRandom(int primero, int ultimo) {
+        Random r = new Random();
+        entero = r.enteroAleatorioMath(primero, ultimo);
+        return entero;
+    }
+
+}

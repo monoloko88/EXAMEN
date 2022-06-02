@@ -1,0 +1,9 @@
+package miPaquete;
+
+public class Principal {
+    public static void main(String[] args) {
+        Hija h = new Hija("Juan", 23, "blue");
+        h.print();
+        System.out.println(h);
+    }
+}

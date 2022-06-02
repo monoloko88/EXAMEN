@@ -15,5 +15,4 @@ INDEX VERSION 1.131+C:\Users\Alumno\Documents\GitHub\ProyectosPublicos\.metadata
 1978246157.index
 1277803171.index
 4122040688.index
-4228322651.index
 3080400591.index
