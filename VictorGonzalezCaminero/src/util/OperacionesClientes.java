@@ -41,13 +41,18 @@ public class OperacionesClientes {
 	}
 
 	public void mostrarCliente() {
-		if (arrayClientes[0] != null) {
-			for (Cliente cliente : arrayClientes) {
-				System.out.println(cliente);
+		for (int i = 0; i < arrayClientes.length; i++) {
+			if(arrayClientes[i].getNombre() != "") {
+				System.out.println(arrayClientes[i]);
 			}
-		} else {
-			System.out.println("No hay clientes.");
 		}
+//		if (arrayClientes[0] != null) {
+//			for (Cliente cliente : arrayClientes) {
+//				System.out.println(cliente);
+//			}
+//		} else {
+//			System.out.println("No hay clientes.");
+//		}
 	}
 
 	public void buscarCliente(String nombre) {
