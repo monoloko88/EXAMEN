@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import datos.Libro;
+import datos.Narrativa;
+import datos.Poesia;
 
 public class OperacionesLibros {
 	private ArrayList<Libro> arrayListLibros;
@@ -32,6 +34,7 @@ public class OperacionesLibros {
 			libro = (Libro) it.next();
 			if (libro.getNombre().equalsIgnoreCase(nombre)) {
 				it.remove();
+				System.out.println("Libro eliminado.");
 			}
 		}
 	}
@@ -52,13 +55,30 @@ public class OperacionesLibros {
 				if (libro.getNombre().equalsIgnoreCase(nombre)) {
 					System.out.println("Libro encontrado.");
 					System.out.println(libro);
+					break;
 				} else {
 					System.out.println("Libro no encontrado.");
+					break;
 				}
 			}
 		} else {
 			System.out.println("No hay libros.");
 		}
+	}
+
+	public void addLibro(String nombre, boolean nP) {
+		int id = 0;
+		for (Libro libro : arrayListLibros) {
+			id = libro.getId() + 1;
+			System.out.println(id);
+		}
+		if (nP) {
+			arrayListLibros.add(new Narrativa(nombre, id));
+		}else {
+			arrayListLibros.add(new Poesia(nombre, id));
+		}
+
+		System.out.println("Libro añadido.");
 	}
 
 }

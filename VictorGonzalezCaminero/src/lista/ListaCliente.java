@@ -18,9 +18,10 @@ public class ListaCliente {
 
 	public ListaCliente() {
 		Menu menu = new Menu();
-		menu.menuCliente();
+		
 
 		do {
+			menu.menuCliente();
 			System.out.print("Introducir una opcion: ");
 			opcion = scan.nextInt();
 
@@ -30,25 +31,37 @@ public class ListaCliente {
 				System.out.println("Ingrese el nombre del cliente");
 				nombre = scan.next();
 				System.out.println("Ingrese la edad del cliente");
-				int edad = scan.nextInt();
+				edad = scan.nextInt();
 
 				oC.addCliente(nombre, edad);
 				break;
 			case 2:
-				System.out.println("Borrar Cliente");
-				System.out.println("Ingrese el nombre del cliente");
-				nombre = scan.next();
+				if (arrayClientes[0] != null) {
+					System.out.println("Borrar Cliente");
+					System.out.println("Ingrese el nombre del cliente");
+					nombre = scan.next();
 
-				oC.deleteCliente(nombre);
+					oC.deleteCliente(nombre);
+				} else {
+					System.out.println("No hay clientes.");
+				}
 				break;
 			case 3:
-				oC.mostrarCliente();
+				if (arrayClientes[0] != null) {
+					oC.mostrarCliente();
+				} else {
+					System.out.println("No hay clientes.");
+				}
 				break;
 			case 4:
-				System.out.println("Buscar Cliente");
-				System.out.println("Ingrese el nombre del cliente");
-				nombre = scan.next();
-				oC.buscarCliente(nombre);
+				if (arrayClientes[0] != null) {
+					System.out.println("Buscar Cliente");
+					System.out.println("Ingrese el nombre del cliente");
+					nombre = scan.next();
+					oC.buscarCliente(nombre);
+				} else {
+					System.out.println("No hay clientes.");
+				}
 				break;
 			default:
 				break;

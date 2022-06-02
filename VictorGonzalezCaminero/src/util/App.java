@@ -15,9 +15,10 @@ public class App {
 		System.out.println("GESTION DE LA LIBRERIA");
 
 		Menu menu = new Menu();
+		do {
 		menu.menuInicial();
 
-		do {
+		
 			System.out.print("Introducir una opcion: ");
 			opcion = scan.nextInt();
 

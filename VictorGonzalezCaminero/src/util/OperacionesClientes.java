@@ -1,7 +1,6 @@
 package util;
 
 import datos.Cliente;
-import datos.Libro;
 
 public class OperacionesClientes {
 	private Cliente[] arrayClientes;
@@ -14,19 +13,19 @@ public class OperacionesClientes {
 
 	public void addCliente(String nombre, int edad) {
 		cliente1 = new Cliente(nombre, edad);
-		
-		if(arrayClientes[arrayClientes.length-1] == null) {
-			for (Cliente cliente : arrayClientes) {
-				if (cliente == null) {
-					cliente = cliente1;
+
+		if (arrayClientes[arrayClientes.length - 1] == null) {
+			for (int i = 0; i < arrayClientes.length; i++) {
+				if (arrayClientes[i] == null) {
+					arrayClientes[i] = cliente1;
 					System.out.println("Cliente añadido.");
 					break;
 				}
 			}
-		}else {
+		} else {
 			System.out.println("No se pueden añadir mas clientes.");
 		}
-		
+
 	}
 
 	public void deleteCliente(String nombre) {
@@ -41,29 +40,25 @@ public class OperacionesClientes {
 	}
 
 	public void mostrarCliente() {
-		for (int i = 0; i < arrayClientes.length; i++) {
-			if(arrayClientes[i].getNombre() != "") {
-				System.out.println(arrayClientes[i]);
+		for (Cliente cliente : arrayClientes) {
+			if (cliente != null) {
+				System.out.println(cliente.toString());
 			}
 		}
-//		if (arrayClientes[0] != null) {
-//			for (Cliente cliente : arrayClientes) {
-//				System.out.println(cliente);
-//			}
-//		} else {
-//			System.out.println("No hay clientes.");
-//		}
 	}
 
 	public void buscarCliente(String nombre) {
-		for (Cliente cliente : arrayClientes) {
-			if (cliente.getNombre().equalsIgnoreCase(nombre)) {
-				System.out.println("Cliente encontrado.");
-				cliente.toString();
-			} else {
-				System.out.println("Cliente no encontrado.");
+			for (Cliente cliente : arrayClientes) {
+				if (cliente.getNombre().equalsIgnoreCase(nombre)) {
+					System.out.println("Cliente encontrado.");
+					System.out.println(cliente.toString());
+					break;
+				} else {
+					System.out.println("Cliente no encontrado.");
+					break;
+				}
 			}
-		}
+
 	}
 
 }

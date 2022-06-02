@@ -12,18 +12,20 @@ public class ListaLibro {
 	private static int opcion = 0;
 
 	private ArrayList<Libro> arrayListLibros = new ArrayList<Libro>();
-	
+
 	private OperacionesLibros oL = new OperacionesLibros(arrayListLibros);
 
 	private String nombre;
-	private int id;
+	private String narrativaPoesia;
+	private boolean nP;
 
 	public ListaLibro() {
-		
+
 		Menu menu = new Menu();
-		menu.menuLibros();
 		
+
 		do {
+			menu.menuLibros();
 			System.out.print("Introducir una opcion: ");
 			opcion = scan.nextInt();
 
@@ -32,29 +34,44 @@ public class ListaLibro {
 				System.out.println("Agregar Libro");
 				System.out.println("Ingrese el nombre del libro");
 				nombre = scan.next();
-
-				oL.addLibro(nombre);
+				System.out.println("Elija: Narrativa o Poesia.");
+				narrativaPoesia = scan.next();
+				if(narrativaPoesia.equalsIgnoreCase("Narrativa")) {
+					nP = true;
+				}else {
+					nP = false;
+				}
+				oL.addLibro(nombre,nP);
+//				oL.addLibro(nombre);
 				break;
 			case 2:
-				System.out.println("Borrar Libro");
-				System.out.println("Ingrese el nombre del libro");
-				nombre = scan.next();
+				if (arrayListLibros.size() > 0) {
+					System.out.println("Borrar Libro");
+					System.out.println("Ingrese el nombre del libro");
+					nombre = scan.next();
 
-				oL.deleteLibro(nombre);
+					oL.deleteLibro(nombre);
+				} else {
+					System.out.println("No hay libros.");
+				}
 				break;
 			case 3:
 				oL.mostrarLibro();
 				break;
 			case 4:
-				System.out.println("Buscar Libro");
-				System.out.println("Ingrese el nombre del libro");
-				nombre = scan.next();
-				oL.buscarLibro(nombre);
+				if (arrayListLibros.size() > 0) {
+					System.out.println("Buscar Libro");
+					System.out.println("Ingrese el nombre del libro");
+					nombre = scan.next();
+					oL.buscarLibro(nombre);
+				} else {
+					System.out.println("No hay libros.");
+				}
 				break;
 			default:
 				break;
 			}
 		} while (opcion != 0);
-		
+
 	}
 }

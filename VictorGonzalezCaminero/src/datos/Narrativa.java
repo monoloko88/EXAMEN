@@ -1,25 +1,23 @@
 package datos;
 
 public class Narrativa extends Libro {
-	private String autor;
+	private String tipo;
 	
-	public Narrativa(String nombre, int id, String autor) {
+	public Narrativa(String nombre, int id) {
 		super(nombre, id);
-		this.autor = autor;
+		this.tipo = "Narrativa";
 	}
-
-	public String getAutor() {
-		return autor;
+	public String getTipo() {
+		return tipo;
 	}
-
-	public void setAutor(String autor) {
-		this.autor = autor;
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
-
+	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return super.toString();
+		return super.toString() + "Tipo: " +tipo;
 	}
 
 }
