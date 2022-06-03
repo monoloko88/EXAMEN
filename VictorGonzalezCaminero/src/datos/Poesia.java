@@ -2,7 +2,7 @@ package datos;
 
 public class Poesia extends Libro {
 	private String tipo;
-	
+
 	public Poesia(String nombre, int id) {
 		super(nombre, id);
 		this.tipo = "Poesia";
@@ -18,8 +18,7 @@ public class Poesia extends Libro {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString() + "Tipo: " +tipo;
+		return super.toString() + " Tipo: " + tipo;
 	}
 
 }

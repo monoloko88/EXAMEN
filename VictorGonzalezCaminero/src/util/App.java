@@ -16,22 +16,20 @@ public class App {
 
 		Menu menu = new Menu();
 		do {
-		menu.menuInicial();
+			menu.menuInicial();
 
-		
 			System.out.print("Introducir una opcion: ");
 			opcion = scan.nextInt();
 
 			switch (opcion) {
-			case 1:
-				ListaLibro listaLibro = new ListaLibro();
-				break;
-			case 2:
-				ListaCliente listaCliente = new ListaCliente();
-				break;
-
-			default:
-				break;
+				case 1:
+					ListaLibro listaLibro = new ListaLibro();
+					break;
+				case 2:
+					ListaCliente listaCliente = new ListaCliente();
+					break;
+				default:
+					break;
 			}
 		} while (opcion != 0);
 		System.out.println("Muchas Gracias. Adios.");
