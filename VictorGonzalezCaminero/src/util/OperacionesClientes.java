@@ -31,12 +31,17 @@ public class OperacionesClientes {
 		boolean deleted = false;
 
 		for (int i = 0; i < arrayClientes.length; i++) {
-			if (arrayClientes[i].getNombre().equalsIgnoreCase(nombre)) {
-				arrayClientes[i] = null;
-				deleted = true;
+			if (arrayClientes[i] != null) {
+				if (arrayClientes[i].getNombre().equals(nombre)) {
+					for (int j = i; j < arrayClientes.length - 1; j++) {
+						arrayClientes[j] = arrayClientes[j + 1];
+					}
+					arrayClientes[arrayClientes.length - 1] = null;
+					i--;
+					deleted = true;
+					System.out.println("Cliente borrado.");
+				}
 
-				System.out.println("Cliente eliminado.");
-				break;
 			}
 		}
 
@@ -54,15 +59,18 @@ public class OperacionesClientes {
 	}
 
 	public void buscarCliente(String nombre) {
+		boolean found = false;
 		for (Cliente cliente : arrayClientes) {
-			if (cliente.getNombre().equalsIgnoreCase(nombre)) {
+			if (cliente != null && cliente.getNombre().equalsIgnoreCase(nombre)) {
 				System.out.println("Cliente encontrado.");
 				System.out.println(cliente.toString());
-				break;
-			} else {
-				System.out.println("Cliente no encontrado.");
+				found = true;
 				break;
 			}
+		}
+
+		if (!found) {
+			System.out.println("Cliente no encontrado.");
 		}
 	}
 }

@@ -22,10 +22,10 @@ public class Menu {
 
 	public void menuCliente() {
 		System.out.println("*************************");
-		System.out.println("1_ Añadir Cliente");
-		System.out.println("2_ Borrar Cliente");
-		System.out.println("3_ Mostrar Cliente");
-		System.out.println("4_ Buscar Cliente");
+		System.out.println("1_ Añadir Clientes");
+		System.out.println("2_ Borrar Clientes");
+		System.out.println("3_ Mostrar Clientes");
+		System.out.println("4_ Buscar Clientes");
 		System.out.println("0_ Salir de la Aplicacion");
 		System.out.println("*************************");
 	}
